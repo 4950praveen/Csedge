@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Website</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation Menu */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 0;
+      z-index: 999;
+    }
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .navbar li {
+      margin: 0 20px;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Parallax Sections */
+    .parallax {
+      height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .section1 {
+      background-image: url('image1.jpg');
+    }
+    .section2 {
+      background-image: url('image2.jpg');
+    }
+    .section3 {
+      background-image: url('image3.jpg');
+    }
+
+    /* Content Sections */
+    .content {
+      padding: 50px;
+      text-align: justify;
+    }
+
+    /* Animation Effects */
+    .fade-in {
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
+    }
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <div class="navbar">
+    <ul>
+      <li><a href="#section1">Section 1</a></li>
+      <li><a href="#section2">Section 2</a></li>
+      <li><a href="#section3">Section 3</a></li>
+    </ul>
+  </div>
+
+  <!-- Parallax Sections -->
+  <div class="parallax section1">
+    <h1 class="fade-in">Welcome to the Parallax Website</h1>
+  </div>
+  <div class="content">
+    <h2>Section 1</h2>
+    <p class="fade-in">This is the content for Section 1. It will be displayed below the parallax section.</p>
+  </div>
+
+  <div class="parallax section2">
+    <h1 class="fade-in">Explore the Parallax Effect</h1>
+  </div>
+  <div class="content">
+    <h2>Section 2</h2>
+    <p class="fade-in">This is the content for Section 2. It will be displayed below the parallax section.</p>
+  </div>
+
+  <div class="parallax section3">
+    <h1 class="fade-in">Enjoy the Responsive Design</h1>
+  </div>
+  <div class="content">
+    <h2>Section 3</h2>
+    <p class="fade-in">This is the content for Section 3. It will be displayed below the parallax section.</p>
+  </div>
+
+  <script>
+    // Smooth scrolling to section links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Fade-in animation
+    document.querySelectorAll('.fade-in').forEach(element => {
+      element.style.opacity = 0;
+      element.classList.add('fade-in');
+    });
+  </script>
+</body>
+</html>

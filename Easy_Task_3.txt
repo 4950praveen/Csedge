@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Landing Page</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    /* Slogan */
+    .slogan {
+      background-color: #f2f2f2;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .slogan h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    /* About */
+    .about {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    /* Services */
+    .services {
+      background-color: #f2f2f2;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .services h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .services-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .services-list div {
+      width: 200px;
+      margin: 20px;
+    }
+
+    /* Offers */
+    .offers {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .offers h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 10px;
+      }
+      .navbar a {
+        margin: 10px 0;
+      }
+      .services-list div {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Offers</a>
+  </div>
+
+  <!-- Slogan -->
+  <div class="slogan">
+    <h1>Welcome to Our Simple Landing Page</h1>
+    <p>Discover our amazing products and services.</p>
+  </div>
+
+  <!-- About -->
+  <div class="about">
+    <h2>About Us</h2>
+    <p>We are a company dedicated to providing high-quality products and services to our customers. Our mission is to exceed your expectations and help you achieve your goals.</p>
+  </div>
+
+  <!-- Services -->
+  <div class="services">
+    <h2>Our Services</h2>
+    <div class="services-list">
+      <div>
+        <h3>Service 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div>
+        <h3>Service 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div>
+        <h3>Service 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offers -->
+  <div class="offers">
+    <h2>Our Offers</h2>
+    <p>Check out our latest offers and promotions.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2023 Simple Landing Page. All rights reserved.</p>
+  </div>
+</body>
+</html>
